@@ -2,25 +2,102 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/addNumButfff"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <!--    <TextView-->
+    <!--        android:id="@+id/ifConnected"-->
+    <!--        android:layout_width="222dp"-->
+    <!--        android:layout_height="35dp"-->
+    <!--        android:layout_marginStart="92dp"-->
+    <!--        android:layout_marginTop="48dp"-->
+    <!--        android:gravity="left"-->
+    <!--        android:textSize="20dp"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        tools:ignore="MissingConstraints" />-->
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/androidId"-->
+    <!--        android:layout_width="107dp"-->
+    <!--        android:layout_height="34dp"-->
+    <!--        android:layout_marginStart="136dp"-->
+    <!--        android:layout_marginTop="40dp"-->
+    <!--        android:text="androidId"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/telNums"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/ifConnected"-->
+    <!--        app:layout_constraintVertical_bias="0.0" />-->
+
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="left"
-        android:text="Press power button to turn on / off screen and see log message in android monitor."
-        android:textSize="20dp"
-        android:layout_marginTop="20dp"
-        tools:ignore="MissingConstraints" />
+        android:id="@+id/telNums"
+        android:layout_width="238dp"
+        android:layout_height="61dp"
+        android:text="numery telefonów tu będą"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
-        android:id="@+id/sms"
+        android:id="@+id/delete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="79dp"
-        tools:layout_editor_absoluteY="268dp" />
+        android:layout_marginTop="20dp"
+        android:text="usuń numery"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.247"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addNumBut" />
+
+    <TextView
+        android:id="@+id/textView"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:text="numery telefonów alarmowych"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.392"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/addNumBut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="124dp"
+        android:text="Dodaj numer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.244"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/telNums" />
+
+    <EditText
+        android:id="@+id/addNumEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="phone"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.303"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/telNums" />
+
+    <Button
+        android:id="@+id/addNProperBut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:visibility="gone"
+        android:text="dodaj"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.427"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/telNums" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

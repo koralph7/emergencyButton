@@ -1,17 +1,23 @@
-//package com.example.myapplication;
-//
-//import android.content.BroadcastReceiver;
-//import android.content.Context;
-//import android.content.Intent;
-//
-//public class CallBroadcastReceiver extends BroadcastReceiver {
-//
-//    @Override
-//    public void onReceive(Context context, Intent intent) {
-//        Intent i = new Intent();
-//        i.setClassName("com.example.myapplication",
-//                "com.example.myapplication.MainActivity");
-//        i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-//        context.startActivity(i);
-//    }
-//}
+package com.example.myapplication;
+
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.os.Build;
+import android.util.Log;
+import android.widget.Toast;
+
+public class CallBroadcastReceiver extends BroadcastReceiver {
+
+    @Override
+    public void onReceive(Context context, Intent intent) {
+        Log.i("Broadcast Listened", "Service tried to stop");
+        Toast.makeText(context, "Service restarted", Toast.LENGTH_SHORT).show();
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            context.startForegroundService(new Intent(context, ScreenOnOffBackgroundService.class));
+        } else {
+            context.startService(new Intent(context, ScreenOnOffBackgroundService.class));
+        }
+    }
+}
